@@ -1,4 +1,5 @@
 class Product < ActiveRecord::Base
+belongs_to :inventories
 validates_presence_of :price, :title, :description, :image_url
 validates_numericality_of :price, :greater_than => 0.01
 validates_uniqueness_of :title
